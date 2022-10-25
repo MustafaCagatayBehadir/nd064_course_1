@@ -1,0 +1,2 @@
+name: TechTrends - Package with Docker
+on: [push]

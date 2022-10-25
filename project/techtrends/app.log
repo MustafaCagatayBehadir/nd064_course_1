@@ -1,24 +1,3 @@
-## Docker commands used to build the application 
-# TODO: insert the docker build command
-docker build -t techtrends:v1.0.0 .
-
-## Docker commands used to run the application
-# TODO: insert the docker run command
-docker run --name techtrends -d -p 7111:3111 techtrends:v1.0.0
-
-## Docker commands used to get the application logs
-# TODO: insert the docker logs command
-PS C:\Users\mbehadir\nd064_course_1\project\techtrends> docker logs -f techtrends
- * Serving Flask app 'app' (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: on
-
-## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container
-PS C:\Users\mbehadir\nd064_course_1\project\techtrends> docker exec -it techtrends bash
-root@94aa371c572b:/app# more app.log
 INFO:_internal, 18102022, 23:44:51,  * Restarting with stat
 WARNING:_internal, 18102022, 23:44:52,  * Debugger is active!
 INFO:_internal, 18102022, 23:44:52,  * Debugger PIN: 131-239-281
@@ -26,11 +5,11 @@ WARNING:_internal, 18102022, 23:44:53,  * Running on all addresses.
 WARNING: This is a development server. Do not use it in a production deployment.
 INFO:_internal, 18102022, 23:44:53,  * Running on http://10.20.99.153:3111/ (Press CTRL+C to quit)
 INFO:_internal, 18102022, 23:45:20, 127.0.0.1 - - [18/Oct/2022 23:45:20] "GET / HTTP/1.1" 200 -
-INFO:_internal, 18102022, 23:45:20, 127.0.0.1 - - [18/Oct/2022 23:45:20] "GET /static/css/main.css HTTP/1.1" 304 -        
-INFO:_internal, 18102022, 23:45:20, 127.0.0.1 - - [18/Oct/2022 23:45:20] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:_internal, 18102022, 23:45:20, 127.0.0.1 - - [18/Oct/2022 23:45:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:_internal, 18102022, 23:45:20, 127.0.0.1 - - [18/Oct/2022 23:45:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 INFO:app, 18102022, 23:46:26, Article, "KubeCon + CloudNativeCon 2021" retrieved!
 INFO:_internal, 18102022, 23:46:26, 127.0.0.1 - - [18/Oct/2022 23:46:26] "GET /2 HTTP/1.1" 200 -
-INFO:_internal, 18102022, 23:46:26, 127.0.0.1 - - [18/Oct/2022 23:46:26] "GET /static/css/main.css HTTP/1.1" 304 -        
+INFO:_internal, 18102022, 23:46:26, 127.0.0.1 - - [18/Oct/2022 23:46:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:_internal, 18102022, 23:47:15,  * Detected change in 'C:\\Users\\mbehadir\\nd064_course_1\\project\\techtrends\\app.py', reloading
 INFO:_internal, 18102022, 23:47:15,  * Restarting with stat
 WARNING:_internal, 18/10/2022, 23:47:16,  * Debugger is active!
@@ -47,8 +26,7 @@ WARNING:_internal, 18/10/2022, 23:47:20,  * Running on all addresses.
 INFO:_internal, 18/10/2022, 23:47:20,  * Running on http://10.20.99.153:3111/ (Press CTRL+C to quit)
 INFO:app, 18/10/2022, 23:47:25, Article, "KubeCon + CloudNativeCon 2021" retrieved!
 INFO:_internal, 18/10/2022, 23:47:25, 127.0.0.1 - - [18/Oct/2022 23:47:25] "GET /2 HTTP/1.1" 200 -
-INFO:_internal, 18/10/2022, 23:47:25, 127.0.0.1 - - [18/Oct/2022 23:47:25] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 18/10/2022, 23:47:25, 127.0.0.1 - - [18/Oct/2022 23:47:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:_internal, 18/10/2022, 23:56:43,  * Detected change in 'C:\\Users\\mbehadir\\nd064_course_1\\project\\techtrends\\app.py', reloading
 INFO:_internal, 18102022, 23:56:43,  * Restarting with stat
 WARNING:_internal, 18/10/2022, 23:56:44,  * Debugger is active!
@@ -64,9 +42,8 @@ WARNING:_internal, 18/10/2022, 23:57:39,  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:_internal, 18/10/2022, 23:57:39,  * Running on http://10.20.99.153:3111/ (Press CTRL+C to quit)
 ERROR:app, 18/10/2022, 23:57:44, Article, with id {post_id} can not be found.
-INFO:_internal, 18/10/2022, 23:57:44, 127.0.0.1 - - [18/Oct/2022 23:57:44] "GET /15 HTTP/1.1" 404 -
-INFO:_internal, 18/10/2022, 23:57:44, 127.0.0.1 - - [18/Oct/2022 23:57:44] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 18/10/2022, 23:57:44, 127.0.0.1 - - [18/Oct/2022 23:57:44] "[33mGET /15 HTTP/1.1[0m" 404 -
+INFO:_internal, 18/10/2022, 23:57:44, 127.0.0.1 - - [18/Oct/2022 23:57:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:_internal, 19/10/2022, 00:04:48,  * Detected change in 'C:\\Users\\mbehadir\\nd064_course_1\\project\\techtrends\\app.py', reloading
 INFO:_internal, 19102022, 00:04:48,  * Restarting with stat
 WARNING:_internal, 19/10/2022, 00:04:49,  * Debugger is active!
@@ -83,25 +60,20 @@ WARNING:_internal, 19/10/2022, 00:06:47,  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:_internal, 19/10/2022, 00:06:47,  * Running on http://10.20.99.153:3111/ (Press CTRL+C to quit)
 INFO:_internal, 19/10/2022, 00:06:52, 127.0.0.1 - - [19/Oct/2022 00:06:52] "GET /create HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 00:06:53, 127.0.0.1 - - [19/Oct/2022 00:06:53] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 19/10/2022, 00:06:53, 127.0.0.1 - - [19/Oct/2022 00:06:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:app, 19/10/2022, 00:07:06, Article, "TEST-TITLE1" is created!
-INFO:_internal, 19/10/2022, 00:07:06, 127.0.0.1 - - [19/Oct/2022 00:07:06] "POST /create HTTP/1.1" 302 -
+INFO:_internal, 19/10/2022, 00:07:06, 127.0.0.1 - - [19/Oct/2022 00:07:06] "[32mPOST /create HTTP/1.1[0m" 302 -
 INFO:_internal, 19/10/2022, 00:07:06, 127.0.0.1 - - [19/Oct/2022 00:07:06] "GET / HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 00:07:06, 127.0.0.1 - - [19/Oct/2022 00:07:06] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 19/10/2022, 00:07:06, 127.0.0.1 - - [19/Oct/2022 00:07:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:app, 19/10/2022, 00:07:29, Article, "CNCF Cloud Native Definition v1.0" retrieved!
 INFO:_internal, 19/10/2022, 00:07:29, 127.0.0.1 - - [19/Oct/2022 00:07:29] "GET /5 HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 00:07:29, 127.0.0.1 - - [19/Oct/2022 00:07:29] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 19/10/2022, 00:07:29, 127.0.0.1 - - [19/Oct/2022 00:07:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:app, 19/10/2022, 00:07:40, The "About Us" page is retrieved.
 INFO:_internal, 19/10/2022, 00:07:40, 127.0.0.1 - - [19/Oct/2022 00:07:40] "GET /about HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 00:07:40, 127.0.0.1 - - [19/Oct/2022 00:07:40] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 19/10/2022, 00:07:40, 127.0.0.1 - - [19/Oct/2022 00:07:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 ERROR:app, 19/10/2022, 00:07:50, Article, with id {post_id} can not be found.
-INFO:_internal, 19/10/2022, 00:07:50, 127.0.0.1 - - [19/Oct/2022 00:07:50] "GET /15 HTTP/1.1" 404 -
-INFO:_internal, 19/10/2022, 00:07:50, 127.0.0.1 - - [19/Oct/2022 00:07:50] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 19/10/2022, 00:07:50, 127.0.0.1 - - [19/Oct/2022 00:07:50] "[33mGET /15 HTTP/1.1[0m" 404 -
+INFO:_internal, 19/10/2022, 00:07:50, 127.0.0.1 - - [19/Oct/2022 00:07:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:_internal, 19/10/2022, 00:08:59,  * Detected change in 'C:\\Users\\mbehadir\\nd064_course_1\\project\\techtrends\\app.py', reloading
 INFO:_internal, 19/10/2022, 00:09:00,  * Restarting with stat
 WARNING:_internal, 19/10/2022, 00:09:01,  * Debugger is active!
@@ -110,9 +82,8 @@ WARNING:_internal, 19/10/2022, 00:09:02,  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:_internal, 19/10/2022, 00:09:02,  * Running on http://10.20.99.153:3111/ (Press CTRL+C to quit)
 ERROR:app, 19/10/2022, 00:09:02, Article, with id 15 can not be found.
-INFO:_internal, 19/10/2022, 00:09:02, 127.0.0.1 - - [19/Oct/2022 00:09:02] "GET /15 HTTP/1.1" 404 -
-INFO:_internal, 19/10/2022, 00:09:02, 127.0.0.1 - - [19/Oct/2022 00:09:02] "GET /static/css/main.css HTTP/1.1" 304        
--
+INFO:_internal, 19/10/2022, 00:09:02, 127.0.0.1 - - [19/Oct/2022 00:09:02] "[33mGET /15 HTTP/1.1[0m" 404 -
+INFO:_internal, 19/10/2022, 00:09:02, 127.0.0.1 - - [19/Oct/2022 00:09:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:_internal, 19/10/2022, 00:09:20, 127.0.0.1 - - [19/Oct/2022 00:09:20] "GET /status HTTP/1.1" 200 -
 INFO:_internal, 19/10/2022, 00:09:35, 127.0.0.1 - - [19/Oct/2022 00:09:35] "GET /metrics HTTP/1.1" 200 -
 INFO:_internal, 19/10/2022, 00:09:38, 127.0.0.1 - - [19/Oct/2022 00:09:38] "GET /metrics HTTP/1.1" 200 -
@@ -122,27 +93,3 @@ INFO:_internal, 19/10/2022, 00:09:39, 127.0.0.1 - - [19/Oct/2022 00:09:39] "GET 
 INFO:_internal, 19/10/2022, 00:09:40, 127.0.0.1 - - [19/Oct/2022 00:09:40] "GET /metrics HTTP/1.1" 200 -
 INFO:_internal, 19/10/2022, 00:09:40, 127.0.0.1 - - [19/Oct/2022 00:09:40] "GET /metrics HTTP/1.1" 200 -
 INFO:_internal, 19/10/2022, 00:09:40, 127.0.0.1 - - [19/Oct/2022 00:09:40] "GET /metrics HTTP/1.1" 200 -
-WARNING:_internal, 19/10/2022, 17:25:20,  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-INFO:_internal, 19/10/2022, 17:25:20,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-INFO:_internal, 19/10/2022, 17:25:20,  * Restarting with stat
-WARNING:_internal, 19/10/2022, 17:25:21,  * Debugger is active!
-INFO:_internal, 19/10/2022, 17:25:21,  * Debugger PIN: 145-444-060
-INFO:_internal, 19/10/2022, 17:25:46, 172.17.0.1 - - [19/Oct/2022 17:25:46] "GET / HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 17:25:46, 172.17.0.1 - - [19/Oct/2022 17:25:46] "GET /static/css/main.css HTTP/1.1" 200 -     
-INFO:_internal, 19/10/2022, 17:25:46, 172.17.0.1 - - [19/Oct/2022 17:25:46] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:_internal, 19/10/2022, 17:27:00, 172.17.0.1 - - [19/Oct/2022 17:27:00] "GET / HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 17:27:00, 172.17.0.1 - - [19/Oct/2022 17:27:00] "GET /static/css/main.css HTTP/1.1" 304
- -
-INFO:app, 19/10/2022, 17:28:45, Article, "2020 CNCF Annual Report" retrieved!
-INFO:_internal, 19/10/2022, 17:28:45, 172.17.0.1 - - [19/Oct/2022 17:28:45] "GET /1 HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 17:28:45, 172.17.0.1 - - [19/Oct/2022 17:28:45] "GET /static/css/main.css HTTP/1.1" 304       
- -
-INFO:_internal, 19/10/2022, 17:29:36, 172.17.0.1 - - [19/Oct/2022 17:29:36] "GET /metrics HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 17:30:06, 172.17.0.1 - - [19/Oct/2022 17:30:06] "GET /create HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 17:30:06, 172.17.0.1 - - [19/Oct/2022 17:30:06] "GET /static/css/main.css HTTP/1.1" 304
- -
-INFO:app, 19/10/2022, 17:30:41, Article, "TEST POST" is created!
-INFO:_internal, 19/10/2022, 17:30:41, 172.17.0.1 - - [19/Oct/2022 17:30:41] "POST /create HTTP/1.1" 302 -
-INFO:_internal, 19/10/2022, 17:30:41, 172.17.0.1 - - [19/Oct/2022 17:30:41] "GET / HTTP/1.1" 200 -
-INFO:_internal, 19/10/2022, 17:30:41, 172.17.0.1 - - [19/Oct/2022 17:30:41] "GET /static/css/main.css HTTP/1.1" 304  
