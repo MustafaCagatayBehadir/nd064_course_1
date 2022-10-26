@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./project
-          file: ./techtrends/Dockerfile
+          file: techtrends/Dockerfile
           push: true
           tags: mbehadir/tech-trends:latest
 
