@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./project/techtrends
-          file: ./project/techtrends/Dockerfile
+          file: Dockerfile
           push: true
           tags: mbehadir/tech-trends:latest
 
