@@ -31,7 +31,6 @@ jobs:
         with:
           context: ./project
           file: ./project/techtrends/Dockerfile
-          platforms: linux/amd64
           push: true
           tags: mbehadir/tech-trends:latest
 
