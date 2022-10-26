@@ -2,6 +2,7 @@ FROM python:3.8
 
 EXPOSE 3111/tcp
 COPY . /app
+COPY requirements.txt /app
 WORKDIR /app
 RUN pip install -r requirements.txt && python init_db.py
 
