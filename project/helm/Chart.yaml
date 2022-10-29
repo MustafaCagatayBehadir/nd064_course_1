@@ -1,0 +1,9 @@
+apiVersion: v1
+description: Install a techtrends deployment
+name: techtrends
+keywords:
+  - techtrends
+version: 1.0.0
+maintainers:
+  - name: mbehadir
+    email: mustafabehadir@gmail.com
