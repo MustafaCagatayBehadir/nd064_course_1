@@ -23,6 +23,8 @@ resources:
     cpu: "500m"
 
 containerPort: 3111
+livenessProbePort: 3111
+readinessProbePort: 3111
 
 livenessProbe: /status
 

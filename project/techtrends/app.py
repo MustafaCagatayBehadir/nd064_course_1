@@ -1,10 +1,17 @@
-from asyncio.log import logger
 import sqlite3
 
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
 import logging
+import sys
+
+stdout_handler = logging.StreamHandler(sys.stdout)
+stderr_handler = logging.StreamHandler(sys.stderr)
+handlers = [stdout_handler, stderr_handler]
+
+format_output = "%(levelname)s:%(module)s, %(asctime)s, %(message)s"
+logging.basicConfig(format=format_output, datefmt="%d/%m/%Y, %H:%M:%S", level=logging.DEBUG, handlers=handlers)
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
@@ -111,6 +118,4 @@ def metrics():
 
 # start the application on port 3111
 if __name__ == "__main__":
-    format = "%(levelname)s:%(module)s, %(asctime)s, %(message)s"
-    logging.basicConfig(filename='app.log', format=format, datefmt="%d/%m/%Y, %H:%M:%S", level=logging.DEBUG)
     app.run(host='0.0.0.0', port='3111', debug=True)
